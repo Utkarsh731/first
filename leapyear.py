@@ -1,9 +1,9 @@
 year=int(input())
 def leapyear(year):
-    leap='No'
+    leap='no'
     if year%4==0 and year%100!=0:
-        leap='Yes'
+        leap='yes'
     elif year%100==0 and year%400==0:
-        leap='No'
+        leap='no'
     return leap
 print(leapyear(year))
