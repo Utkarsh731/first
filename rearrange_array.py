@@ -3,16 +3,17 @@ array=list(map(int,input().split()))
 s=num//2
 j=num-1
 array.sort()
+q=[]
 if (num%2)!=0:
     for i in range(0,s):
-        print(array[j],end=",")
-        print(array[i],end=",")
+        q.append(array[j])
+        q.append(array[i])
         j-=1
-    print(array[s])
+    q.append(array[j])
+    print(",".join(map(str,q)))    
 else:
-    for i in range(0,s-1):
-        print(array[j],end=",")
-        print(array[i],end=",")
+    for i in range(0,s):
+        q.append(array[j])
+        q.append(array[i])
         j-=1
-    print(array[j],end=",")
-    print(array[s-1])
+    print(",".join(map(str,q)))
